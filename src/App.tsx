@@ -1,26 +1,34 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import {StyledTitle} from "./styles/typography";
+import {StyledParagraph} from "./styles/typography";
+import {StyledButton} from "./styles/buttons";
+import Header from "./styles/components/Header";
+import {MainBanner} from "./styles/components/MainBanner";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    return (
+        <div className="App">
+
+            <Header/>
+            <MainBanner/>
+
+            <StyledTitle tag="h2" fontWeight={400} fontSize="md">
+                Pokémon Dashboard
+            </StyledTitle>
+
+            <StyledParagraph fontSize="lg">
+                Esta é uma aplicação para o aprendizado da biblioteca Styled Components
+            </StyledParagraph>
+
+            <StyledButton buttonSize="md" buttonStyle="solid">
+                Teste
+            </StyledButton>
+
+            <StyledButton buttonSize="md" buttonStyle="outlined">
+                Teste
+            </StyledButton>
+        </div>
+    );
 }
 
 export default App;
